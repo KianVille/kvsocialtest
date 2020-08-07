@@ -3,7 +3,6 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 // const mongoose = require('mongoose');
 // const cors = require('cors');
-const path = require('path');
 
 // const authRoute = require('./routes/auth');
 // const validTokenRoute = require('./routes/validToken');
@@ -34,11 +33,11 @@ const path = require('path');
 // app.use('/timeline', timelineRoute);
 // app.use('/search', searchRoute);
 
-if (process.env.NODE_ENV === 'production' || true) {
+if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
-
+  const path = require('path');
   app.get('*', (req,res) => {
-    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname,'client','build','index.html'));
   });
 }
 
