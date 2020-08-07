@@ -1,0 +1,38 @@
+.feed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.feed__post {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feed__post_textarea {
+    width: 100%;
+}
+
+.feed__message {
+    margin-top: 3%;
+    width: 60%;
+}
+
+.feed__post_button {
+    margin-top: 10px;
+    margin-left: auto;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+    .feed__message {
+        margin-top: 10%;
+        width: 95%;
+    }
+    .feed__post {
+        width: 95%;
+    }
+  }

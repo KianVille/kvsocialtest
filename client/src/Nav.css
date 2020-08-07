@@ -1,0 +1,15 @@
+#account__menu {
+    display: none;
+}
+
+#account__search_bar {
+    display: none;
+}
+
+#account_loginSignin {
+    margin-left: auto;
+}
+
+#account_loginSignin button {
+    margin-right: 20px;
+}
